@@ -1,0 +1,7 @@
+{
+	"costumes": [{
+			"rotationCenterY": "180",
+			"fileName": "space.png",
+			"rotationCenterX": "240"
+		}]
+}

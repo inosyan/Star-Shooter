@@ -1,0 +1,7 @@
+{
+	"costumes": [{
+			"rotationCenterY": "180",
+			"fileName": "red-plate.png",
+			"rotationCenterX": "240"
+		}]
+}

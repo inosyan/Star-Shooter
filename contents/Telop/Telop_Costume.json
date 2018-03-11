@@ -1,0 +1,37 @@
+{
+	"costumes": [{
+			"rotationCenterY": "101",
+			"fileName": "title.png",
+			"rotationCenterX": "170"
+		},
+		{
+			"rotationCenterY": "15",
+			"fileName": "press-space.png",
+			"rotationCenterX": "94"
+		},
+		{
+			"rotationCenterY": "44",
+			"fileName": "stage1.png",
+			"rotationCenterX": "127"
+		},
+		{
+			"rotationCenterY": "42",
+			"fileName": "stage2.png",
+			"rotationCenterX": "127"
+		},
+		{
+			"rotationCenterY": "42",
+			"fileName": "final-stage.png",
+			"rotationCenterX": "185"
+		},
+		{
+			"rotationCenterY": "48",
+			"fileName": "gameover.png",
+			"rotationCenterX": "166"
+		},
+		{
+			"rotationCenterY": "72",
+			"fileName": "congratulation.png",
+			"rotationCenterX": "222"
+		}]
+}

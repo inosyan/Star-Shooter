@@ -1,0 +1,72 @@
+{
+	"costumes": [{
+			"rotationCenterY": "7",
+			"fileName": "enemy_bullet.png",
+			"rotationCenterX": "7"
+		},
+		{
+			"rotationCenterY": "12",
+			"fileName": "enemy-shot.png",
+			"rotationCenterX": "4"
+		},
+		{
+			"rotationCenterY": "28",
+			"fileName": "enemy-crash.png",
+			"rotationCenterX": "27"
+		},
+		{
+			"rotationCenterY": "28",
+			"fileName": "enemy.png",
+			"rotationCenterX": "27"
+		},
+		{
+			"rotationCenterY": "27",
+			"fileName": "enemy2.png",
+			"rotationCenterX": "27"
+		},
+		{
+			"rotationCenterY": "22",
+			"fileName": "enemy3.png",
+			"rotationCenterX": "21"
+		},
+		{
+			"rotationCenterY": "21",
+			"fileName": "enemy4.png",
+			"rotationCenterX": "21"
+		},
+		{
+			"rotationCenterY": "23",
+			"fileName": "enemy5.png",
+			"rotationCenterX": "24"
+		},
+		{
+			"rotationCenterY": "20",
+			"fileName": "enemy6.png",
+			"rotationCenterX": "21"
+		},
+		{
+			"rotationCenterY": "20",
+			"fileName": "enemy7.png",
+			"rotationCenterX": "19"
+		},
+		{
+			"rotationCenterY": "67",
+			"fileName": "boss1.png",
+			"rotationCenterX": "67"
+		},
+		{
+			"rotationCenterY": "80",
+			"fileName": "boss2.png",
+			"rotationCenterX": "80"
+		},
+		{
+			"rotationCenterY": "22",
+			"fileName": "boss3-1.png",
+			"rotationCenterX": "22"
+		},
+		{
+			"rotationCenterY": "11",
+			"fileName": "boss3-2.png",
+			"rotationCenterX": "11"
+		}]
+}

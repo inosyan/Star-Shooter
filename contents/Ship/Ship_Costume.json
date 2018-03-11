@@ -1,0 +1,12 @@
+{
+	"costumes": [{
+			"rotationCenterY": "30",
+			"fileName": "ship.png",
+			"rotationCenterX": "30"
+		},
+		{
+			"rotationCenterY": "28",
+			"fileName": "ship-crash.png",
+			"rotationCenterX": "28"
+		}]
+}
