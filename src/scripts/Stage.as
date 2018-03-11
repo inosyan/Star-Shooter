@@ -7,12 +7,14 @@ const MSG_WARNING = "msgWarning";
 const MSG_STAGE_CHANGED = "msgStageChanged";
 const MSG_SHIP_APPEAR = "msgShipAppear";
 const MSG_GOTO_NEXT_STAGE = "msgGotoNextStage";
+const MSG_ENERGY_APPEAR = "msgEnergyAppear";
 
 const MAX_STAGE = 3;
 
 var isGhost;
 var stageNum;
 var boss3PosX, boss3PosY;
+var shotLevel;
 
 [Variable(name="SHIP", visible=false, x=10, y=10, mode=1, sliderMin=0, sliderMax=100)]
 var shipCount;
@@ -22,7 +24,14 @@ var score;
 [Variable(name="DEBUG", visible=true, x=10, y=30, mode=1, sliderMin=0, sliderMax=100)]
 var debug;
 
-function scripts(){	
+function scripts(){
+	whenFlagClicked(function(){
+		forever(){
+			playSound("drum satellite");
+			wait(1.95);
+		}
+	});
+	
 	whenIReceive(MSG_TITLE, function(){
 		hideVariable(shipCount);
 		hideVariable(score);

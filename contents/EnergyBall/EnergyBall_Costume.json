@@ -3,5 +3,10 @@
 			"rotationCenterY": "14",
 			"fileName": "energy-ball.png",
 			"rotationCenterX": "14"
+		},
+		{
+			"rotationCenterY": "14",
+			"fileName": "one-up.png",
+			"rotationCenterX": "14"
 		}]
 }

@@ -1,3 +1,8 @@
 {
-	"sounds": []
+	"sounds": [{
+			"fileName": "laser2.wav"
+		},
+		{
+			"fileName": "laser3.wav"
+		}]
 }

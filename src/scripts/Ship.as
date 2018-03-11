@@ -47,12 +47,15 @@ function scripts(){
 	whenIReceive(MSG_START, function(){
 		repeatUntil(shipCount == 0){
 			waitUntil(isGhost == 0 && touching("Enemy"));
+			isGhost = 1;
+			playSound("explode2");
 			switchCostumeTo("ship-crash");
 			crashing = 1;
 			repeat(10){
 				changeEffectBy(EFFECT_GHOST, 10);
 			}
 			shipCount--;
+			shotLevel = 1;
 			if (shipCount == 0){
 				hide();
 				clearGraphicEffects();
@@ -62,7 +65,6 @@ function scripts(){
 				clearGraphicEffects();
 				switchCostumeTo("ship");
 				crashing = 0;
-				isGhost = 1;
 				broadcast(MSG_SHIP_APPEAR);
 			}
 		}

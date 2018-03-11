@@ -19,6 +19,7 @@ var enemyHP;
 var boss3Radius, boss3Degree;
 var boss3RotateDirection;
 var boss3SubRad, boss3SubDeg;
+var gameover;
 
 function test(eneNum:int){
 	enemyNum = eneNum;
@@ -32,9 +33,10 @@ function scripts(){
 	});
 	
 	whenIReceive(MSG_STAGE_CHANGED, function(){
-		enemyNum = 15;
+		enemyNum = 1;
+		gameover = 0;
 		wait(2);
-		repeatUntil(enemyNum == MAX_ENEMY_NUM){
+		repeatUntil(enemyNum == MAX_ENEMY_NUM || gameover == 1){
 			if (debugMode == 1) {
 				debugTest();
 			} else {
@@ -42,12 +44,14 @@ function scripts(){
 				enemyNum++;
 			}
 		}
-		//wait(2);
-		//broadcast(MSG_WARNING);
-		//wait(2);
-		kind = KIND_BOSS;
-		createCloneOf(CLONETARGET_MYSELF);
-		kind = KIND_NORMAL;
+		if (gameover == 0) {
+			wait(2);
+			broadcast(MSG_WARNING);
+			wait(2);
+			kind = KIND_BOSS;
+			createCloneOf(CLONETARGET_MYSELF);
+			kind = KIND_NORMAL;			
+		}
 	});
 	
 	whenIStartAsAClone(function(){
@@ -72,7 +76,7 @@ function scripts(){
 			if (kind == KIND_BOSS) whenBossCloned();
 			if (kind == KIND_BOSS_SUB) boss3SubAnim();
 		} else {
-			repeatUntil(rate >= 1 || touching("Shot")){
+			repeatUntil(rate >= 1 || (touching("Shot") && rate > 0)){
 				if (enemyNum == 1) straight(false);
 				if (enemyNum == 2) straight(true);
 				if (enemyNum == 3) snake(false);
@@ -92,7 +96,7 @@ function scripts(){
 		}
 	});
 	
-	whenIStartAsAClone(function(){
+	whenIStartAsAClone(function(){		
 		if (kind != KIND_BULLET){
 			waitUntil(enemyHP == 0);
 			switchCostumeTo("enemy-crash");
@@ -110,6 +114,7 @@ function scripts(){
 			repeatUntil(enemyHP == 0){
 				waitUntil(touching("Shot"));
 				enemyHP--;
+				playSound("explode");
 				if (enemyHP != 0){
 					repeat(4){
 						setEffectTo(EFFECT_BRIGHTNESS, 50);
@@ -125,6 +130,15 @@ function scripts(){
 	});
 	
 	whenIReceive(MSG_GAMEOVER, function(){
+		gameover = 1;
+	});
+	
+	whenIReceive(MSG_CLEAR, function(){
+		stop(STOPTARGET_OTHER_SCRIPTS);
+		deleteThisClone();
+	});
+	
+	whenIReceive(MSG_TITLE, function(){
 		stop(STOPTARGET_OTHER_SCRIPTS);
 		deleteThisClone();
 	});

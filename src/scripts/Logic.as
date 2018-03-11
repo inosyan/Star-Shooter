@@ -8,7 +8,8 @@ function scripts(){
 	whenIReceive(MSG_TITLE, function(){
 		shipCount = 3;
 		score = 0;
-		stageNum = 3;
+		stageNum = 1;
+		shotLevel = 1;
 		waitUntil(keyPressed(KEY_SPACE));
 		waitUntil(!keyPressed(KEY_SPACE));
 		broadcast(MSG_START);
@@ -16,11 +17,21 @@ function scripts(){
 	});
 	
 	whenIReceive(MSG_GAMEOVER, function(){
+		stop(STOPTARGET_OTHER_SCRIPTS);
 		waitForTitle();
 	});	
 	
 	whenIReceive(MSG_CLEAR, function(){
+		stop(STOPTARGET_OTHER_SCRIPTS);		
 		waitForTitle();
+	});
+	
+	whenIReceive(MSG_START, function(){
+		stop(STOPTARGET_OTHER_SCRIPTS);
+		forever(){
+			wait(pickRandomTo(10, 20));
+			broadcast(MSG_ENERGY_APPEAR);
+		}
 	});
 	
 	whenIReceive(MSG_GOTO_NEXT_STAGE, function(){
