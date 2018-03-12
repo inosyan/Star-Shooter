@@ -10,7 +10,7 @@ Javascript風のコードから、スクラッチのブロックに変換する�
 
 ## Star Shooter
 Watch "Star Shooter" on scratch.  
-「Start Shooter」をスクラッチで見る  
+「Star Shooter」をスクラッチで見る  
 <a href="https://scratch.mit.edu/projects/209214440/" target="_blank">Star Shooter</a>  
 
 
