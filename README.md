@@ -5,13 +5,13 @@ This project is the source code for sniptch of the scratch project "Star Shooter
 ## Snipetch / スニペッチ
 It is an application to convert from Javascript-like code to scratch block.  
 Javascript風のコードから、スクラッチのブロックに変換するアプリです。  
-<a href="https://www.inosyan.com/snipetch">Snipetch</a>  
+<a href="https://www.inosyan.com/snipetch" target="_blank">Snipetch</a>  
 
 
 ## Star Shooter
 Watch "Star Shooter" on scratch.  
 「Start Shooter」をスクラッチで見る  
-<a href="https://scratch.mit.edu/projects/209214440/">Star Shooter</a>  
+<a href="https://scratch.mit.edu/projects/209214440/" target="_blank">Star Shooter</a>  
 
 
 It is a vertical scroll shooting game.The last boss is tough!  
